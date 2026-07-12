@@ -3,21 +3,22 @@
    Everything on the page updates automatically from here.
 ========================================================= */
 const CONFIG = {
-  babyName: "Baby's Name",
-  parents: "Parent One & Parent Two",
-  godparents: "Godparent One & Godparent Two",
-  childFullName: "Child's Full Name",
+  babyName: "Marco Antony",
+   childFullName: "Child's Full Name",
+  parents: "Layana Thomas & Jithin Antony",
+  godparents: "Chinju Antony & Nithin Varghese",
+  
 
   // Use ISO format: "YYYY-MM-DDTHH:MM:SS"
   eventDateISO: "2026-09-20T11:00:00",
 
-  venueName: "St. Mary's Church",
-  venueAddress: "123 Church Street, Your City",
+  venueName: "St. George's Church",
+  venueAddress: "Puthevelikkara, 683594",
   // Simple text search works well, e.g. "St. Mary's Church, Your City"
-  mapQuery: "St. Mary's Church, Your City",
+  mapQuery: "St. George's church, Puthenvelikkara",
 
   // Include country code, digits only, e.g. "491701234567"
-  whatsappNumber: "491701234567",
+  whatsappNumber: "+917034769828",
   whatsappMessage: "Hello! We'd be delighted to attend the baptism celebration. 🕊️"
 };
 
