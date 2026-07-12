@@ -4,13 +4,13 @@
 ========================================================= */
 const CONFIG = {
   babyName: "Marco Antony",
-   childFullName: "Child's Full Name",
+   childFullName: "Marco Antony",
   parents: "Layana Thomas & Jithin Antony",
   godparents: "Chinju Antony & Nithin Varghese",
   
 
   // Use ISO format: "YYYY-MM-DDTHH:MM:SS"
-  eventDateISO: "2026-09-20T11:00:00",
+  eventDateISO: "2026-08-29T05:00:00",
 
   venueName: "St. George's Church",
   venueAddress: "Puthevelikkara, 683594",
