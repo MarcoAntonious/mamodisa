@@ -26,7 +26,22 @@ body{
   *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
 }
 
-/* ============ PETALS ============ */
+/* ---- VERSE ---- */
+.verse-section{
+  max-width:440px; margin:36px auto 0; text-align:center; padding:0 20px;
+}
+.verse-mark{
+  display:block; font-family:'Cinzel', serif; font-size:2.2rem; color:var(--gold-light);
+  line-height:1; margin-bottom:4px;
+}
+.verse-text{
+  font-family:'Quicksand', sans-serif; font-style:italic; font-size:1rem;
+  color:var(--ink); line-height:1.6; margin:0 0 8px;
+}
+.verse-ref{
+  font-family:'Cinzel', serif; font-size:0.8rem; letter-spacing:1.5px;
+  color:var(--gold-deep); text-transform:uppercase; margin:0;
+}/* ============ PETALS ============ */
 #petal-layer{
   position:fixed; inset:0; pointer-events:none; z-index:40; overflow:hidden;
 }
