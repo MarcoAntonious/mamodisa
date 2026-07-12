@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Baptism of Baby Name</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Falling daisy petals live here, injected by script.js -->
+<div id="petal-layer" aria-hidden="true"></div>
+
+<!-- ============ ENVELOPE SCREEN ============ -->
+<div id="envelope-screen">
+  <div class="env-sky"></div>
+  <div id="envelope" role="button" tabindex="0" aria-label="Open invitation">
+    <div class="env-shadow"></div>
+    <div class="env-body">
+      <div class="env-back"></div>
+      <div class="env-left"></div>
+      <div class="env-right"></div>
+      <div class="env-front"></div>
+      <div class="env-flap">
+        <div class="seal">
+          <svg viewBox="0 0 100 100" width="44" height="44">
+            <circle cx="50" cy="50" r="46" fill="none" stroke="#C9A227" stroke-width="3"/>
+            <path d="M50 30 C40 20, 20 25, 22 42 C23 55, 38 62, 50 74 C62 62, 77 55, 78 42 C80 25, 60 20, 50 30 Z" fill="#C9A227"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p id="tap-hint">tap the envelope to open your invitation</p>
+</div>
+
+<!-- ============ INVITATION ============ -->
+<main id="invitation">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="dove-wrap">
+      <svg id="dove-svg" viewBox="0 0 300 180" width="220" height="132">
+        <defs>
+          <linearGradient id="doveBody" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#eaf2f8"/>
+          </linearGradient>
+        </defs>
+        <!-- tail -->
+        <path d="M118 118 C100 128, 82 132, 66 138 C86 132, 104 126, 122 108 Z" fill="url(#doveBody)" stroke="#cfd9e2" stroke-width="1"/>
+        <!-- back wing -->
+        <path d="M150 95 C120 70, 95 78, 70 62 C100 60, 128 58, 152 78 C158 84, 156 90, 150 95 Z" fill="#dfe9f2" opacity="0.9"/>
+        <!-- body -->
+        <path d="M150 60 C185 55, 215 72, 222 100 C226 118, 214 132, 196 136 C210 128, 214 114, 206 100 C196 84, 172 78, 152 84 C138 88, 128 100, 130 114 C118 108, 112 92, 122 78 C132 65, 142 60, 150 60 Z" fill="url(#doveBody)" stroke="#cfd9e2" stroke-width="1.2"/>
+        <!-- front wing -->
+        <path d="M150 82 C168 60, 196 52, 224 60 C204 58, 182 66, 170 84 C186 82, 202 88, 210 102 C192 92, 172 90, 158 100 C150 92, 148 88, 150 82 Z" fill="#ffffff" stroke="#d7e2ec" stroke-width="1"/>
+        <!-- head -->
+        <circle cx="222" cy="88" r="16" fill="url(#doveBody)" stroke="#cfd9e2" stroke-width="1.2"/>
+        <!-- beak -->
+        <path d="M236 88 L252 84 L237 94 Z" fill="#E7B23A"/>
+        <!-- eye -->
+        <circle cx="227" cy="84" r="1.8" fill="#2F4858"/>
+        <!-- leaf sprig in beak -->
+        <g transform="translate(252,80) rotate(18)">
+          <path d="M0 10 C10 0, 26 -4, 34 4 C26 6, 14 10, 8 18 C4 14, 0 12, 0 10 Z" fill="#8FBF87" stroke="#6fa066" stroke-width="0.6"/>
+          <path d="M0 10 C10 6, 22 4, 34 4" fill="none" stroke="#6fa066" stroke-width="0.6"/>
+          <path d="M14 16 C24 8, 38 6, 46 12 C38 12, 26 16, 20 24 C16 20, 14 18, 14 16 Z" fill="#a3d199" stroke="#6fa066" stroke-width="0.6"/>
+        </g>
+        <!-- legs -->
+        <path d="M182 132 L180 142 M192 134 L192 144" stroke="#E7B23A" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="light-rays" aria-hidden="true"></div>
+
+    <div class="video-circle">
+      <video id="hero-video" autoplay muted loop playsinline poster="assets/images/photo1.jpg">
+        <source src="assets/video/baptism-video.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <h1 class="golden-title">THE BAPTISM OF</h1>
+    <h2 class="baby-name" id="baby-name-display">Baby's Name</h2>
+
+    <p class="hero-sub">Please join us as we celebrate this blessed sacrament</p>
+  </section>
+
+  <!-- FAMILY NAMES -->
+  <section class="names">
+    <div class="name-card">
+      <span class="name-label">Parents</span>
+      <p class="name-value" id="parents-names">Parent One &amp; Parent Two</p>
+    </div>
+    <div class="name-divider">✦</div>
+    <div class="name-card">
+      <span class="name-label">Godparents</span>
+      <p class="name-value" id="godparents-names">Godparent One &amp; Godparent Two</p>
+    </div>
+    <div class="name-divider">✦</div>
+    <div class="name-card">
+      <span class="name-label">Child</span>
+      <p class="name-value" id="child-name">Child's Full Name</p>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-section">
+    <h3 class="section-title">Counting down to the blessing</h3>
+    <div class="countdown" id="countdown">
+      <div class="count-box"><span id="cd-days">00</span><label>Days</label></div>
+      <div class="count-box"><span id="cd-hours">00</span><label>Hours</label></div>
+      <div class="count-box"><span id="cd-mins">00</span><label>Minutes</label></div>
+      <div class="count-box"><span id="cd-secs">00</span><label>Seconds</label></div>
+    </div>
+    <p class="event-date" id="event-date-display"></p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section">
+    <h3 class="section-title">Little Moments</h3>
+    <div class="gallery">
+      <div class="photo-frame"><img src="assets/images/photo1.jpg" alt="Photo 1" onerror="this.parentElement.classList.add('empty')"></div>
+      <div class="photo-frame"><img src="assets/images/photo2.jpg" alt="Photo 2" onerror="this.parentElement.classList.add('empty')"></div>
+      <div class="photo-frame"><img src="assets/images/photo3.jpg" alt="Photo 3" onerror="this.parentElement.classList.add('empty')"></div>
+      <div class="photo-frame"><img src="assets/images/photo4.jpg" alt="Photo 4" onerror="this.parentElement.classList.add('empty')"></div>
+      <div class="photo-frame"><img src="assets/images/photo5.jpg" alt="Photo 5" onerror="this.parentElement.classList.add('empty')"></div>
+      <div class="photo-frame"><img src="assets/images/photo6.jpg" alt="Photo 6" onerror="this.parentElement.classList.add('empty')"></div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location-section">
+    <h3 class="section-title">Where to Find Us</h3>
+    <p class="venue-name" id="venue-name">St. Mary's Church</p>
+    <p class="venue-address" id="venue-address">123 Church Street, Your City</p>
+    <div class="map-frame">
+      <iframe
+        id="map-embed"
+        src="https://www.google.com/maps?q=St.+Mary%27s+Church&output=embed"
+        width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <a id="directions-link" class="pill-btn" href="https://www.google.com/maps/search/?api=1&query=St.+Mary%27s+Church" target="_blank" rel="noopener">Get Directions</a>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp-section">
+    <h3 class="section-title">Kindly RSVP</h3>
+    <p class="rsvp-copy">We'd love to celebrate this special day with you. Please let us know if you'll be joining.</p>
+    <a id="whatsapp-link" class="whatsapp-btn" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.71.45 3.38 1.3 4.85L2 22l5.36-1.41a9.9 9.9 0 0 0 4.68 1.19h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.51 2 12.04 2Zm0 18.02h-.01a8.1 8.1 0 0 1-4.14-1.13l-.3-.18-3.18.84.85-3.1-.19-.32a8.11 8.11 0 0 1-1.25-4.32c0-4.49 3.66-8.14 8.15-8.14 2.18 0 4.22.85 5.76 2.39a8.09 8.09 0 0 1 2.38 5.76c0 4.49-3.66 8.2-8.07 8.2Zm4.47-6.13c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.35-1.68-.14-.24-.02-.37.11-.49.11-.11.24-.29.37-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.02-.46-.02-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
+      <span>RSVP on WhatsApp</span>
+    </a>
+  </section>
+
+  <footer class="footer">
+    <p>With love, we can't wait to celebrate with you 🕊️</p>
+  </footer>
+
+</main>
+
+<audio id="bg-music" src="assets/audio/song.mp3" loop preload="none"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
